@@ -1,4 +1,4 @@
-package parse
+package selector
 
 import (
 	"testing"
@@ -15,8 +15,7 @@ func TestParsing(t *testing.T) {
 
 	t.Run("Parse basic selector", func(t *testing.T) {
 		input := "*."
-		Wish(t, parseSelector(input), ShouldEqual, ssb.ExploreAll(ssb.Matcher()).Node())
-
+		Wish(t, Parse(input), ShouldEqual, ssb.ExploreAll(ssb.Matcher()).Node())
 	})
 
 }
