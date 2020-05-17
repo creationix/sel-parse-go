@@ -15,7 +15,7 @@ func TestParsing(t *testing.T) {
 
 	t.Run("Parse basic selector", func(t *testing.T) {
 		input := "*."
-		Wish(t, Parse(input), ShouldEqual, ssb.ExploreAll(ssb.Matcher()).Node())
+		Wish(t, ParseSyntax(input), ShouldEqual, ssb.ExploreAll(ssb.Matcher()).Node())
 	})
 
 }
